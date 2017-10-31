@@ -10,7 +10,7 @@ exports.createReq = (url, cb)=> {
           let parsed = JSON.parse(body);
           console.log(parsed);
           console.log('////////////')
-          return parsed;
+        //   return parsed;
           cb();
         });
         res.on("error", (err) => {
