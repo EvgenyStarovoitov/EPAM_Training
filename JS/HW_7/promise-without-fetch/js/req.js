@@ -1,8 +1,8 @@
 var http = require('http');
 
-exports.createReq = (option)=> {  
+exports.createReq = (url)=> {  
     return new Promise((resolve, reject)=> {
-        http.get( option, (res) => {
+        http.get( url, (res) => {
             let body = '';
             res.on('data', (data) => {
                 body += data;
