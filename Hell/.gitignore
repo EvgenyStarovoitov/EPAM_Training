@@ -1,0 +1,5 @@
+﻿# Игнорировать установленные npm пакеты:
+node_modules
+build
+.DS_Store (OSX)
+ *.bak, etc.

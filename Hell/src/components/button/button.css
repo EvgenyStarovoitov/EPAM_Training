@@ -1,0 +1,16 @@
+.button{
+    border: 1px solid grey;
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px/5px; 
+    cursor: pointer;
+}
+.button_s{
+    width: 3em;
+}
+.button_m{
+    width: 4.5em;
+}
+.button_l{
+    width: 6em;
+}
