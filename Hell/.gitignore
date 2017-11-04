@@ -1,5 +1,6 @@
 ﻿# Игнорировать установленные npm пакеты:
 node_modules
 build
+package-lock.json
 .DS_Store (OSX)
  *.bak, etc.
