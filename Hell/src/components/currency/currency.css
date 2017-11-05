@@ -1,0 +1,13 @@
+.currency{
+    display: flex;
+    flex-direction: row;
+}
+.currency__abbr{
+    padding: 0.5em;
+}
+.currency__rate{
+    padding: 0.5em;
+}
+.currency__change{
+    padding: 0.5em;
+}

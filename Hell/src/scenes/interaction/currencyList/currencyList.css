@@ -3,9 +3,12 @@
     margin: 0em;
     border: none;
     text-decoration: none;
+    background: transparent;
 }
-.interaction{
+
+.currency-list{
     display: flex;
     flex-direction: column;
-    flex: 2 1 0em;
+    padding: 1em;
+    background: #E9E2E2;
 }

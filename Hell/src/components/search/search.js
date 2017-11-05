@@ -15,8 +15,8 @@ class Search extends React.Component {
     render() {
       return (
         <div className="search-field">
-            <input type="text" placeholder="search input"/>
-            <input type="submit" value ={this.state.textValue}/>
+            <input className="search-field__input" type="text" placeholder="search input"/>
+            <input className="search-field__submit" type="submit" value ={this.state.textValue}/>
         </div>
       );
     }

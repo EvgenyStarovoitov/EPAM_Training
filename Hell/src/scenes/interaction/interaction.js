@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import styles from './interaction.css';
 // import Nav from './navigation/nav.js';
 import SearchArea from './searchArea/searchArea.js';
+import CurrencyList from './currencyList/currencyList.js';
 
 
 class Interaction extends React.Component{
@@ -14,10 +15,11 @@ class Interaction extends React.Component{
     render(){
         console.log('render Info');
         return (
-            <div className="info">
+            <div className="interaction">
             {/* <Nav />
             <CurInfo /> */}
             <SearchArea textValue = {"Search"}/>
+            <CurrencyList />
             </div>
         );
     }
