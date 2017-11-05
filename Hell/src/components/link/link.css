@@ -1,0 +1,12 @@
+.link{
+    display: flex;
+    cursor: pointer;
+    border-right: 1px solid grey;
+    text-align: center;
+    text-decoration: underline;
+}
+.link_m{
+    padding: 0.5em 1em;
+    width: 3em;
+    color: grey;
+}

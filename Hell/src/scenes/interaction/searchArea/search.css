@@ -1,0 +1,12 @@
+*{
+    padding: 0em;
+    margin: 0em;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+}
+
+.search-field{
+    display: flex;
+    border: 1px solid grey; 
+}

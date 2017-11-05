@@ -1,0 +1,10 @@
+.nav{
+
+}
+.nav_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px solid grey;
+    margin: 1em;
+}
