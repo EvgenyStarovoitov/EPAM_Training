@@ -4,9 +4,12 @@
     border-right: 1px solid grey;
     text-align: center;
     text-decoration: underline;
+    color: #ACA9A9;
+}
+.link:hover{
+    color: #747171;
 }
 .link_m{
     padding: 0.5em 1em;
     max-width: 3em;
-    color: grey;
 }

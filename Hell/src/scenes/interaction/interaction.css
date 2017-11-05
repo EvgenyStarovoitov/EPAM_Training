@@ -7,5 +7,5 @@
 .interaction{
     display: flex;
     flex-direction: column;
-    flex: 2 1 0em;
+    flex: 1 1 0em;
 }

@@ -5,6 +5,5 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    border: 1px solid grey;
     padding: 1em;
 }

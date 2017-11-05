@@ -3,17 +3,20 @@
     flex-direction: row;
     /* border: 1px solid grey; */
     /* border-radius: 5px/5px; */
-    max-width: 20em;
+    max-width: 15em;
 }
 
 .search-field__input{
+    display: flex;
     padding: 0.5em 0.5em;
     background: #F0F0F1;
     /* border: 1px solid grey; */
     border-radius: 5px 0px 0px 5px;
+    /* min-width: 15em; */
 }
 
 .search-field__submit{
+    display: flex;
     padding: 0.5em 0.5em;
     background: #D3D2D2;
     /* border: 1px solid grey; */

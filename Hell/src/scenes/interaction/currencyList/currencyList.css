@@ -9,6 +9,6 @@
 .currency-list{
     display: flex;
     flex-direction: column;
-    padding: 1em;
-    background: #E9E2E2;
+    padding: 0em 1em;
+    /* border: 1px solid #E7E4E4; */
 }

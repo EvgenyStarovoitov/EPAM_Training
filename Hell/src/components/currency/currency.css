@@ -1,13 +1,21 @@
 .currency{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    background: #EBEAEA;
+    cursor: pointer;
+    max-width: 15em;
 }
-.currency__abbr{
-    padding: 0.5em;
+.currency:hover{
+    background: #BDBBBB;
+}
+.currency__abbr, .currency__rate, .currency__change{
+    display: flex;
+    padding: 1em 0.5em;
 }
 .currency__rate{
-    padding: 0.5em;
+
 }
 .currency__change{
-    padding: 0.5em;
+
 }
