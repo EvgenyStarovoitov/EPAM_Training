@@ -1,9 +1,10 @@
 .nav{
-
+    
 }
 .nav_header{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     padding: 1em;
+    height: 3em;
 }

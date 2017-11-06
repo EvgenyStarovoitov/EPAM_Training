@@ -1,0 +1,26 @@
+.cur-info__row{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    background: #EBEAEA;
+    cursor: pointer;
+    /* max-width: 15em; */
+}
+/* .cur-info__row:hover{
+    background: #BDBBBB;
+} */
+.cur-date, .cur-rate{
+    display: flex;
+    text-align: center;
+    padding: 1em;
+    border-bottom: 1px solid grey;
+}
+.cur-date{
+    flex: 1 0 0;
+}
+.cur-rate{
+    flex: 1 0 0;
+}
+.cur-date:hover, .cur-rate:hover{
+    background: #BDBBBB;
+}

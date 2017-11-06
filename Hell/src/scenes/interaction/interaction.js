@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styles from './interaction.css';
-// import Nav from './navigation/nav.js';
 import SearchArea from './searchArea/searchArea.js';
 import CurrencyList from './currencyList/currencyList.js';
 
@@ -16,10 +15,8 @@ class Interaction extends React.Component{
         console.log('render Info');
         return (
             <div className="interaction">
-            {/* <Nav />
-            <CurInfo /> */}
-            <SearchArea textValue = {"Search"}/>
-            <CurrencyList />
+                <SearchArea textValue = {"Search"}/>
+                <CurrencyList />
             </div>
         );
     }

@@ -7,18 +7,20 @@ import CurInfo from './cyrrencyInfo/cyrrencyInfo.js';
 class Info extends React.Component{
     constructor(props) {
         super(props);
-        // this.state = { textValue: this.props.textValue };
+        this.state = {
+            textValue: this.props.textValue 
+        };
       }
     
     render(){
         console.log('render Info');
         return (
             <div className="info">
-            <Nav />
-            <CurInfo />
+                <Nav />
+                <CurInfo />
             </div>
         );
-    }
-} 
+    };
+}; 
 
 export default Info;
