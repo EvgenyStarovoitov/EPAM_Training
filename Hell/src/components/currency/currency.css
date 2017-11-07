@@ -19,3 +19,9 @@
 .currency__change{
 
 }
+.currency__change_up{
+    background: #DDF1DD;
+}
+.currency__change_low{
+    background: #F3DCDC;
+}

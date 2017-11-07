@@ -26,7 +26,6 @@ class CurrencyList extends React.Component {
       // let b = arr.then((res)=> {return res});
       // console.log(b);
       let arr = req(CurrToday).then((res)=> {return res.map((el)=>{return el.Cur_ID})});
-      
       console.log(arr,CurrToday );
       return (
         <div className="currency-list">
@@ -37,7 +36,7 @@ class CurrencyList extends React.Component {
                   curAbbr = {item.Cur_Abbreviation}
                   curRate = {item.Cur_OfficialRate}
                   curChange={item.Cur_Scale}
-                  curId = {item.Cur_ID}
+                  cur_id = {item.Cur_ID}
                   key = {index}
                   
                 />

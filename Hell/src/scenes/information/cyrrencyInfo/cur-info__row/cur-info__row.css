@@ -6,12 +6,12 @@
     cursor: pointer;
     /* max-width: 15em; */
 }
-/* .cur-info__row:hover{
+
+.cur-info__row:hover{
     background: #BDBBBB;
-} */
+}
 .cur-date, .cur-rate{
-    display: flex;
-    text-align: center;
+    display: flex;    
     padding: 1em;
     border-bottom: 1px solid grey;
 }
@@ -21,6 +21,6 @@
 .cur-rate{
     flex: 1 0 0;
 }
-.cur-date:hover, .cur-rate:hover{
+/* .cur-date:hover, .cur-rate:hover{
     background: #BDBBBB;
-}
+} */

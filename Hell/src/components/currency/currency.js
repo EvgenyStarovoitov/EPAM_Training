@@ -5,17 +5,25 @@ import styles from './currency.css';
 class Currency extends React.Component {
     constructor(props) {
       super(props);
+      this.handleClick = this.handleClick.bind(this)
       this.state = { 
         curAbbr: this.props.curAbbr,
         curRate: this.props.curRate,
         curChange: this.props.curChange,
-        cur_id: this.props.curId
-      };
+        cur_id: this.props.cur_id
+      }
+    }
+    handleClick(e) {
+    console.log(e.target.getAttribute("cur_id"))
+    }
+
+    onItemClick(event) {
+      console.log(event.currentTarget)
     }
   
     render() {
       return (
-        <div className="currency" cur_id={this.props.curId}>
+        <div className="currency" onClick={this.handleClick} cur_id={this.props.cur_id}>
             <div className="currency__abbr">{this.state.curAbbr}</div>
             <div className="currency__rate">{this.state.curRate}</div>
             <div className="currency__change">{this.state.curChange}</div>

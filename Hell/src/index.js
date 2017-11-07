@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './components/button/button.js';
+
 import Info from './scenes/information/info.js';
-import styles from './index.css';
 import Interaction from './scenes/interaction/interaction.js';
+
+import styles from './index.css';
 
 
 let all = () => {
@@ -16,6 +17,12 @@ let all = () => {
 }
 console.log(document.querySelector('.container'));
 ReactDOM.render(all(), document.querySelector('.container'));
+
+// let b = document.querySelectorAll(".currency");
+// console.log(b)
+// b.map((el)=>{
+//    console.log( el.getAttribute(cur_id));
+// })
 
 // let today = moment().format("YYYY-MM-DD");
 // let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD");
