@@ -14,13 +14,11 @@ class Currency extends React.Component {
       }
     }
     handleClick(e) {
-    console.log(e.target.getAttribute("cur_id"))
+    console.log(e.currentTarget.getAttribute("cur_id"))
     }
-
-    onItemClick(event) {
-      console.log(event.currentTarget)
+    someFunc(){
+      console.log("its work")
     }
-  
     render() {
       return (
         <div className="currency" onClick={this.handleClick} cur_id={this.props.cur_id}>

@@ -12,7 +12,7 @@ class Interaction extends React.Component{
       }
     
     render(){
-        console.log('render Info');
+        console.log('render Interaction');
         return (
             <div className="interaction">
                 <SearchArea textValue = {"Search"}/>
