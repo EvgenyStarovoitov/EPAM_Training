@@ -1,0 +1,16 @@
+.convert-form{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    display: none;
+    width: 50%;
+    background: grey;
+}
+
+.converter__row{
+    display: flex;
+    flex-direction: row;
+}
+.show{
+    display: flex;
+}

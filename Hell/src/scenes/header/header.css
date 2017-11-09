@@ -4,8 +4,11 @@
     border: none;
     text-decoration: none;
 }
-.info{
+.header{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    /* height: 5em; */
+    padding: 1em;
+    border-bottom: 1px solid grey;
 }

@@ -1,0 +1,15 @@
+.convert-btn{
+    position: absolute;
+    top:45%;
+    right: 0%;
+    background: #EBEAEA;
+    cursor: pointer;
+    padding: 1em 0.5em;
+    border-radius: 2em 0 0 2em;
+}
+.convert-btn:hover{
+    background: #BDBBBB; 
+}
+.show{
+    display: none;
+}

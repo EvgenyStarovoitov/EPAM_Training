@@ -29,6 +29,7 @@
   "dependencies": {
     "axios": "^0.17.0",
     "moment": "^2.19.1",
+    "node-fetch": "^1.7.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "request": "^2.83.0"

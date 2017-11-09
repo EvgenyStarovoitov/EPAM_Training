@@ -1,10 +1,9 @@
 .cur-info__row{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     background: #EBEAEA;
     cursor: pointer;
-    /* max-width: 15em; */
+    /* padding: 0em 1em; */
 }
 
 .cur-info__row:hover{

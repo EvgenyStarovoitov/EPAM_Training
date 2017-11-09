@@ -1,25 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from './interaction.css';
 import SearchArea from './searchArea/searchArea.js';
-import CurrencyList from './currencyList/currencyList.js';
+import Nav from './navigation/nav.js';
+import styles from './header.css';
 
-
-class Interaction extends React.Component{
+class Header extends React.Component{
     constructor(props) {
         super(props);
         this.state = { textValue: this.props.textValue };
-      }
+    }
     
     render(){
-        console.log('render Interaction');
+        console.log('render Header');
         return (
-            <div className="interaction">
+            <div className="header">
                 <SearchArea textValue = {"Search"}/>
-                <CurrencyList />
+                <Nav />
             </div>
         );
     }
 } 
 
-export default Interaction;
+export default Header;

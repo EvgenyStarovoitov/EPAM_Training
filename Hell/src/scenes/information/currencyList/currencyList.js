@@ -1,39 +1,40 @@
+import styles from './currencyList.css';
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from './currencyList.css';
 import Currency from '../../../components/currency/currency.js';
 import moment from "moment";
 import req from '../../../services/req.js';
-import axios from 'axios';
-// import request from 'request';
+import compareArr from '../../../services/compareArr.js';
 
-let today = moment().format("YYYY-MM-DD");
-let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD");
+
 let url = "http://www.nbrb.by/API/ExRates/Rates?Periodicity=0&onDate=";
-let CurrToday = url + today;
-let CurrYesterday = url+yesterday;
+let urlCurToday = url + moment().format("YYYY-MM-DD");
+let urlCurYesterday = url + moment().subtract(1, 'days').format("YYYY-MM-DD");
 
 class CurrencyList extends React.Component {
     constructor(props) {
       super(props);
       this.state = { 
-        textValue: this.props.textValue,
-        currs : []
+        currsRate : [],
       };
     };
 
     componentDidMount() {
-        axios.get( CurrToday)
-        .then(res => {
-          const currs = res.data.map((el)=> el)
-          this.setState({ currs})        
+      let currsToday = req(urlCurToday );
+      let currsYesterday = req(urlCurYesterday );
+      Promise.all([currsToday , currsYesterday])
+      .then(Data => { 
+        let sheep = compareArr(Data[0],Data[1])
+        Data[0].forEach((el,i)=>{
+          el.Cur_Change = sheep[i]
         })
-        console.log(this.state.currs)
+        this.setState({ currsRate:Data[0]}) 
+      })  
+      .catch(err => {console.log(err)}); 
     }
-  
-    render() {
-     const currs = this.state.currs;
 
+    render() {
+     const currs = this.state.currsRate;
       return (
         <div className="currency-list">
           {currs          
@@ -41,8 +42,8 @@ class CurrencyList extends React.Component {
               return (
                 <Currency
                   curAbbr = {item.Cur_Abbreviation}
-                  curRate = {item.Cur_OfficialRate}
-                  curChange={item.Cur_Scale}
+                  cur_rate = {item.Cur_OfficialRate}
+                  curChange={item.Cur_Change}
                   cur_id = {item.Cur_ID}
                   key = {index}                  
                 />

@@ -1,15 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from './searchArea.css';
-// import Input from '../input/input.js';
-// import Submit from '../submit/submit.js';
 import Search from '../../../components/search/search.js';
-
+import styles from './searchArea.css';
 
 class SearchArea extends React.Component {
     constructor(props) {
       super(props);
-    //   this.textValue = textValue;
       this.state = { 
         textValue: this.props.textValue,
       };

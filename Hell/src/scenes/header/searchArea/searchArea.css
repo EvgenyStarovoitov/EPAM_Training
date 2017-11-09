@@ -8,6 +8,5 @@
 
 .search-area{
     display: flex;
-    padding: 1em;
-    height: 3em;
+    /* height: 3em; */
 }

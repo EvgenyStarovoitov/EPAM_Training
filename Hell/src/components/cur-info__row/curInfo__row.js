@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from './cur-info__row.css';
+import styles from './curInfo__row.css';
 
 class CurInfoRow extends React.Component {
     constructor(props) {

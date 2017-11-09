@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from './nav.css';
 import Link from '../../../components/link/link.js';
+import styles from './nav.css';
 
 class Nav extends React.Component{
     constructor(props) {
