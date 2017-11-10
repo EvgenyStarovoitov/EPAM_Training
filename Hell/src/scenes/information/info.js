@@ -20,8 +20,6 @@ class Info extends React.Component{
                 <CurrencyList />
                 <CurInfo />
                 <Converter />
-                {/* <ConvertBtn />
-                <ConvertForm /> */}
             </div>
         );
     };

@@ -6,7 +6,6 @@ import moment from "moment";
 import req from '../../../services/req.js';
 import compareArr from '../../../services/compareArr.js';
 
-
 let url = "http://www.nbrb.by/API/ExRates/Rates?Periodicity=0&onDate=";
 let urlCurToday = url + moment().format("YYYY-MM-DD");
 let urlCurYesterday = url + moment().subtract(1, 'days').format("YYYY-MM-DD");
@@ -16,6 +15,7 @@ class CurrencyList extends React.Component {
       super(props);
       this.state = { 
         currsRate : [],
+        rates : []
       };
     };
 
@@ -23,18 +23,22 @@ class CurrencyList extends React.Component {
       let currsToday = req(urlCurToday );
       let currsYesterday = req(urlCurYesterday );
       Promise.all([currsToday , currsYesterday])
-      .then(Data => { 
-        let sheep = compareArr(Data[0],Data[1])
-        Data[0].forEach((el,i)=>{
-          el.Cur_Change = sheep[i]
-        })
-        this.setState({ currsRate:Data[0]}) 
-      })  
-      .catch(err => {console.log(err)}); 
+        .then(Data => { 
+          let sheep = compareArr(Data[0],Data[1])
+          Data[0].forEach((el,i)=>{
+            el.Cur_Change = sheep[i]
+          })
+          this.setState({ currsRate:Data[0]}) 
+        })  
+        .catch(err => {console.log(err)}); 
+    }
+
+    handleCur(CurValue){
+      this.setState({rates: CurValue});
     }
 
     render() {
-     const currs = this.state.currsRate;
+      const currs = this.state.currsRate;
       return (
         <div className="currency-list">
           {currs          
@@ -45,7 +49,8 @@ class CurrencyList extends React.Component {
                   cur_rate = {item.Cur_OfficialRate}
                   curChange={item.Cur_Change}
                   cur_id = {item.Cur_ID}
-                  key = {index}                  
+                  key = {index} 
+                  onSelectCur =  {this.handleCur}              
                 />
               );
             })

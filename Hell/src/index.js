@@ -12,7 +12,6 @@ let all = () => {
             <Info />
         </div>
     )
-}
+};
 
-console.log(document.querySelector('.container'));
 ReactDOM.render(all(), document.querySelector('.container'));

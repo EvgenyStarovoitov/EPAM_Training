@@ -18,18 +18,19 @@ class Currency extends React.Component {
         curChange: this.props.curChange,
         cur_id: this.props.cur_id,
         key:this.props.key,
+        rates: this.props.rates
       }
     }
 
-    handleClick(e) {
+    handleClick() {
       let cur_id = this.state.cur_id
       let url  = `http://www.nbrb.by/API/ExRates/Rates/Dynamics/${cur_id}?startDate=${firstDay}&endDate=${lastDay}`;
       req(url)
         .then((res)=>{
-          Rates = res;
+          this.state.rates = res;
+          console.log(this.state.rates)
         })
         .catch((err)=>{console.log(err)})
-      console.log( Rates)
     }
 
     render() {     
