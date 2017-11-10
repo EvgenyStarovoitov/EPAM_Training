@@ -1,7 +1,6 @@
 .cur-info__row{
     display: flex;
     flex-direction: row;
-    background: #EBEAEA;
     cursor: pointer;
     /* padding: 0em 1em; */
 }
@@ -13,6 +12,8 @@
     display: flex;    
     padding: 1em;
     border-bottom: 1px solid grey;
+    color: white;
+    align-items: center;
 }
 .cur-date{
     flex: 1 0 0;

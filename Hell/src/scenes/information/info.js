@@ -10,15 +10,28 @@ class Info extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            rates : []
         };
+        this.updateShared = this.updateShared.bind(this)
       }
     
+    updateShared(sharedvalue){
+        this.setState({rates: sharedvalue})
+    }
+
+    // componentWillUpdate(){console.log(this.state.rates)}
+
     render(){
-        console.log('render Info');
+        let Rates = this.state.rates;
+        // console.log('render Info', Rates);
         return (
             <div className="info">
-                <CurrencyList />
-                <CurInfo />
+                <CurrencyList 
+                passSomeDataFromCurList = {this.updateShared}
+                />
+                <CurInfo 
+                rates = {Rates}
+                />
                 <Converter />
             </div>
         );

@@ -18,27 +18,26 @@ class Currency extends React.Component {
         curChange: this.props.curChange,
         cur_id: this.props.cur_id,
         key:this.props.key,
-        rates: this.props.rates
+  
       }
     }
 
     handleClick() {
-      let cur_id = this.state.cur_id
+      let cur_id = this.props.cur_id
       let url  = `http://www.nbrb.by/API/ExRates/Rates/Dynamics/${cur_id}?startDate=${firstDay}&endDate=${lastDay}`;
       req(url)
         .then((res)=>{
-          this.state.rates = res;
-          console.log(this.state.rates)
+          this.props.onSelectCur(res);
         })
         .catch((err)=>{console.log(err)})
     }
 
     render() {     
       return (
-        <div className="currency" onClick={this.handleClick} cur_id={this.props.cur_id} key = {this.props.key}>
+        <div className="currency" onClick={this.handleClick} cur_id={this.props.cur_id} key = {this.props.key} rates={this.props.rates}>
             <div className="currency__abbr">{this.state.curAbbr}</div>
             <div className="currency__rate">{this.state.cur_rate}</div>
-            <div className="currency__change">{this.state.curChange}</div>
+            <div className={this.state.curChange > 0 ?"currency__change currency__change_up" :  "currency__change currency__change_low"}>{this.state.curChange}</div>
         </div>
       );
     }

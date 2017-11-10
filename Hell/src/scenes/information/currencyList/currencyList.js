@@ -17,6 +17,8 @@ class CurrencyList extends React.Component {
         currsRate : [],
         rates : []
       };
+      this.handleCur = this.handleCur.bind(this);
+      this.someFunc = this.someFunc.bind(this);
     };
 
     componentDidMount() {
@@ -33,24 +35,32 @@ class CurrencyList extends React.Component {
         .catch(err => {console.log(err)}); 
     }
 
+    someFunc(){
+      let pipi = this.state.rates;
+      this.props.passSomeDataFromCurList(pipi)
+    }
+    
     handleCur(CurValue){
       this.setState({rates: CurValue});
+      // console.log(this.state.rates)
+      let pipi = this.state.rates;
+      this.props.passSomeDataFromCurList(CurValue)
     }
 
     render() {
       const currs = this.state.currsRate;
       return (
-        <div className="currency-list">
+        <div className="currency-list" onChange={this.someFunc}>
           {currs          
             .map((item, index) => {
               return (
-                <Currency
+                <Currency 
                   curAbbr = {item.Cur_Abbreviation}
                   cur_rate = {item.Cur_OfficialRate}
                   curChange={item.Cur_Change}
                   cur_id = {item.Cur_ID}
                   key = {index} 
-                  onSelectCur =  {this.handleCur}              
+                  onSelectCur =  {this.handleCur}          
                 />
               );
             })

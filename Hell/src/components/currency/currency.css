@@ -1,27 +1,35 @@
 .currency{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background: #EBEAEA;
     cursor: pointer;
     max-width: 15em;
+    padding: 0.75em 0.5em;
+    border: 1px solid transparent;
 }
+
 .currency:hover{
-    background: #BDBBBB;
+    background: #9E9EFC;
+    color: white;
 }
 .currency__abbr, .currency__rate, .currency__change{
     display: flex;
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
+    flex:1 0 0;
 }
-.currency__rate{
-
+.currency__abbr, .currency__rate{
+    color: #AEAEF5;
+}
+.currency__abbr:hover, .currency__rate:hover{
+    color: white;
 }
 .currency__change{
-
+    border-radius: 0.25em;
+    color: white;
+    text-align: center;
 }
 .currency__change_up{
-    background: #DDF1DD;
+    background: #B5F7B5;
 }
 .currency__change_low{
-    background: #F3DCDC;
+    background: #F1A9A9;
 }

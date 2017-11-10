@@ -4,10 +4,10 @@
     border-right: 1px solid grey;
     text-align: center;
     text-decoration: underline;
-    color: #ACA9A9;
+    color: white;
 }
 .link:hover{
-    color: #747171;
+    color: #E2DFDF;
 }
 .link_m{
     padding: 0.5em 1em;

@@ -11,7 +11,6 @@ class Converter extends React.Component{
         };
       }
       render(){
-        console.log('render Converter');
         return (
             <div className="converter">             
                <ConvertBtn />
